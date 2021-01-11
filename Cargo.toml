@@ -1,0 +1,17 @@
+[package]
+name = "aoc_2019"
+version = "0.1.0"
+authors = ["j-zehnder <20309337+j-zehnder@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+aoc-runner = "0.3.0"
+aoc-runner-derive = "0.3.0"
+
+fancy-regex = "0.4.1"
+itertools = "0.9.0"
+md5 = "0.7.0"
+regex = "1.4.2"
+scan_fmt = "0.2.5"
