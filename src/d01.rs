@@ -16,7 +16,11 @@ pub fn part2(module_masses: &[u32]) -> u32 {
 fn calculate_fuel(mass: &u32) -> u32 {
     let fuel: i32 = *mass as i32 / 3;
     let fuel = fuel - 2;
-    if fuel < 0 { 0 } else { fuel as u32 }
+    if fuel < 0 {
+        0
+    } else {
+        fuel as u32
+    }
 }
 
 fn calculate_total_fuel(mass: &u32) -> u32 {

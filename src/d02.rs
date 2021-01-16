@@ -1,6 +1,12 @@
 #[aoc_generator(day2)]
 pub fn parse_input(input: &str) -> Vec<i32> {
-    input.lines().next().unwrap().split(',').map(|s| s.parse::<i32>().unwrap()).collect()
+    input
+        .lines()
+        .next()
+        .unwrap()
+        .split(',')
+        .map(|s| s.parse::<i32>().unwrap())
+        .collect()
 }
 
 #[aoc(day2, part1)]
@@ -8,7 +14,7 @@ pub fn part1(initial_memory: &[i32]) -> i32 {
     let mut vm = VM::new(initial_memory);
 
     vm.memory[1] = 12;
-    vm.memory[2] = 02;
+    vm.memory[2] = 2;
 
     vm.run();
     vm.memory[0]
@@ -26,7 +32,7 @@ pub fn part2(initial_memory: &[i32]) -> i32 {
             vm.run();
 
             if vm.memory[0] == P2_TARGET {
-                return 100 * i + ii
+                return 100 * i + ii;
             }
         }
     }
@@ -84,7 +90,6 @@ impl VM {
     }
 
     fn step(&mut self) {
-
         let cmdcode = self.memory[self.ins_ptr];
         let opcode = OpCode::from_cmdcode(cmdcode);
         match opcode {
