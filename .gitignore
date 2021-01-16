@@ -1,0 +1,10 @@
+.idea
+*.iml
+.vscode
+
+target
+Cargo.lock
+perf.*
+*.svg
+input
+skeleton.txt
