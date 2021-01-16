@@ -14,5 +14,6 @@ pub mod d05; // intcode upgrades, realtive and input
 pub mod d06; // counting orbits
 pub mod d07; // intcode, phase amplifier circuit
 pub mod d08; // image layering
+pub mod d09; // intcode upgrade, relative mode
 
 aoc_lib! { year = 2019 }
